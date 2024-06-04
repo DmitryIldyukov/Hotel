@@ -12,6 +12,6 @@
     volumes:
       - ./roomManager-data:/var/lib/postgresql/data
     environment:
-      POSTGRES_DB: "oferta_db"
+      POSTGRES_DB: "roommanager_db"
       POSTGRES_USER: "postgres"
       POSTGRES_PASSWORD: "8rMUpd2P71"
