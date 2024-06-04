@@ -1,0 +1,17 @@
+﻿services:
+  hotel:
+    image: hotel
+    build:
+      context: .
+      dockerfile: Hotel/Dockerfile
+  roommanagerdb:
+    image: postgres
+    container_name: RoomManagerDb
+    ports:
+      - "5436:5432"
+    volumes:
+      - ./roomManager-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: "oferta_db"
+      POSTGRES_USER: "postgres"
+      POSTGRES_PASSWORD: "8rMUpd2P71"
