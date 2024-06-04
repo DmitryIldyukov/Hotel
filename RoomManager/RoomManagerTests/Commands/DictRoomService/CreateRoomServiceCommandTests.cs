@@ -4,19 +4,19 @@ using RoomManagerTests.Common;
 
 namespace RoomManagerTests.Commands.DictRoomService;
 
-public class CreateRoomTypeServiceCommandTests : TestCommandBase
+public class CreateRoomServiceCommandTests : TestCommandBase
 {
     [Fact]
     public async Task CreateRoomTypeServiceCommandHandler_Success()
     {
         // Arrage
-        var handler = new CreateRoomTypeServiceCommandHandler(_context);
+        var handler = new CreateRoomServiceCommandHandler(_context);
         string name = "room type service name";
         int serialNumber = 1;
         
         // Act
         var dictRoomTypeServiceId = await handler.Handle(
-            new CreateRoomTypeServiceCommand
+            new CreateRoomServiceCommand
             {
                 Name = name,
                 SerialNumber = serialNumber,

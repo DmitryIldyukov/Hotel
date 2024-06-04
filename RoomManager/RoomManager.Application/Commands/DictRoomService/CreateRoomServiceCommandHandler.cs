@@ -4,14 +4,14 @@ using RoomManager.Infrastructure.Data;
 
 namespace RoomManager.Application.Commands.DictRoomService;
 
-public class CreateRoomTypeServiceCommandHandler : IRequestHandler<CreateRoomTypeServiceCommand, Guid>
+public class CreateRoomServiceCommandHandler : IRequestHandler<CreateRoomServiceCommand, Guid>
 {
     private readonly RoomManagerDbContext _db;
 
-    public CreateRoomTypeServiceCommandHandler(RoomManagerDbContext db) => 
+    public CreateRoomServiceCommandHandler(RoomManagerDbContext db) => 
         _db = db;
     
-    public async Task<Guid> Handle(CreateRoomTypeServiceCommand request, CancellationToken cancellationToken)
+    public async Task<Guid> Handle(CreateRoomServiceCommand request, CancellationToken cancellationToken)
     {
         var isRoomServiceExist = _db.DictRoomServices.Any(_ => !_.IsDeleted && _.Name.ToLower().Trim() == request.Name.ToLower().Trim());
 

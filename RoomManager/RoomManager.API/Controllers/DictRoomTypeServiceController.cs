@@ -17,7 +17,7 @@ public class DictRoomTypeServiceController : ControllerBase
         (_db, _mediator) = (db, mediator);
 
     [HttpPost]
-    public async Task<IActionResult> CreateRoomTypeService(CreateRoomTypeServiceCommand command)
+    public async Task<IActionResult> CreateRoomTypeService(CreateRoomServiceCommand command)
     {
         try
         {

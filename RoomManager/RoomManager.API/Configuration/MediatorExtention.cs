@@ -8,7 +8,7 @@ public static class MediatorExtention
     {
         services.AddMediatR(cfg =>
         {
-            cfg.RegisterServicesFromAssembly(typeof(CreateRoomTypeServiceCommandHandler).Assembly);
+            cfg.RegisterServicesFromAssembly(typeof(CreateRoomServiceCommandHandler).Assembly);
         });
     }
 }
