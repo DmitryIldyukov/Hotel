@@ -18,6 +18,9 @@ public class CreateRoomServiceCommandHandler : IRequestHandler<CreateRoomService
         if (isRoomServiceExist) 
             throw new RecordAlreadyExist($"Услуга с названием {request.Name} уже существует");
 
+        if (request.SerialNumber <= 0)
+            throw new ArgumentException("Порядковый номер не может быть меньше 1");
+
         var roomService = new Domain.Entities.Dicts.DictRoomService(name: request.Name, serialNumber: request.SerialNumber);
 
         _db.Add(roomService);

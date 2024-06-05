@@ -10,12 +10,13 @@ namespace Hotel.Controllers;
 [Route("[controller]")]
 public class DictRoomTypeServiceController : ControllerBase
 {
-    private readonly RoomManagerDbContext _db;
     private readonly IMediator _mediator;
 
-    public DictRoomTypeServiceController(RoomManagerDbContext db, IMediator mediator) => 
-        (_db, _mediator) = (db, mediator);
+    public DictRoomTypeServiceController(IMediator mediator) => 
+        _mediator = mediator;
 
+    [ProducesResponseType(typeof(Guid), StatusCodes.Status201Created)]
+    [ProducesResponseType(typeof(string), StatusCodes.Status400BadRequest)]
     [HttpPost]
     public async Task<IActionResult> CreateRoomTypeService(CreateRoomServiceCommand command)
     {
@@ -23,9 +24,13 @@ public class DictRoomTypeServiceController : ControllerBase
         {
             var response = await _mediator.Send(command);
 
-            return Ok(response);
+            return Created(nameof(CreateRoomTypeService), response);
         }
         catch (RecordAlreadyExist e)
+        {
+            return BadRequest(e.Message);
+        }
+        catch (ArgumentException e)
         {
             return BadRequest(e.Message);
         }
