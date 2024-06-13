@@ -6,6 +6,7 @@ try
 
     builder.Services.AddMediator();
     
+    builder.Services.AddServices();
     builder.Services.AddControllers();
     
     var connectionString = builder.Configuration.GetConnectionString("PostreSQLConnection");

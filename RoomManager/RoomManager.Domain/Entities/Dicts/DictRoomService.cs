@@ -2,6 +2,9 @@
 
 namespace RoomManager.Domain.Entities.Dicts;
 
+/// <summary>
+/// Услуги
+/// </summary>
 public class DictRoomService : DbEntity
 {
     public DictRoomService(string name, int? serialNumber = null)

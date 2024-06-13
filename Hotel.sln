@@ -22,14 +22,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomManager.Infrastructure"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RoomManager.Application", "RoomManager\RoomManager.Application\RoomManager.Application.csproj", "{B2698F6D-ABEB-4FDE-97E5-7970A45270BB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingForm.API", "BookingForm\BookingForm.API\BookingForm.API.csproj", "{E41F5EE4-6863-4F8B-AD76-8743F78C83B1}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingForm.Application", "BookingForm\BookingForm.Application\BookingForm.Application.csproj", "{125930C6-399C-4643-BA56-F0C89605C4F6}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingForm.Domain", "BookingForm\BookingForm.Domain\BookingForm.Domain.csproj", "{70C9EBBA-5E34-4C65-B53C-8893D45841E9}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BookingForm.Infrastructure", "BookingForm\BookingForm.Infrastructure\BookingForm.Infrastructure.csproj", "{133503AF-1E32-48BF-8E06-C7B77674BC7F}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CommonLibrary", "CommonLibrary", "{14AA20C1-BD60-4CC6-B728-6E5D6C2B7115}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonLibrary", "CommonLibrary\CommonLibrary\CommonLibrary.csproj", "{94CD99AB-205C-46CB-90FF-F7CF4884EC79}"

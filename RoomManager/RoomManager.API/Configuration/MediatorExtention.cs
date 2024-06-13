@@ -1,4 +1,4 @@
-﻿using RoomManager.Application.Commands.DictRoomService;
+﻿using RoomManager.Application.Handlers;
 
 namespace Hotel.Configuration;
 
@@ -8,7 +8,7 @@ public static class MediatorExtention
     {
         services.AddMediatR(cfg =>
         {
-            cfg.RegisterServicesFromAssembly(typeof(CreateRoomServiceCommandHandler).Assembly);
+            cfg.RegisterServicesFromAssembly(typeof(RoomServiceCommandHandler).Assembly);
         });
     }
 }

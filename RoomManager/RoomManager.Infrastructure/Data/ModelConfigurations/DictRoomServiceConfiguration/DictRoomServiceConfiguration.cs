@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using RoomManager.Domain.Entities.Dicts;
 
-namespace RoomManager.Infrastructure.Data.Configurations.DictRoomServiceConfiguration;
+namespace RoomManager.Infrastructure.Data.ModelConfigurations.DictRoomServiceConfiguration;
 
 public class DictRoomServiceConfiguration : IEntityTypeConfiguration<DictRoomService>
 {

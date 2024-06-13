@@ -1,9 +1,4 @@
 ﻿services:
-  hotel:
-    image: hotel
-    build:
-      context: .
-      dockerfile: Hotel/Dockerfile
   roommanagerdb:
     image: postgres
     container_name: RoomManagerDb
